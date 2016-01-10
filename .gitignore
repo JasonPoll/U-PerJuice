@@ -15,3 +15,6 @@
 /log/*
 !/log/.keep
 /tmp
+
+# rspec persistence file
+spec/examples.txt
