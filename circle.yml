@@ -1,0 +1,9 @@
+machine:
+  timezone:
+    America/Menominee
+
+test:
+  pre:
+    - bundle exec rake db:migrate:reset:
+        environment:
+          RAILS_ENV: test
