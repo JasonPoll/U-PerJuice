@@ -27,6 +27,7 @@ group :development, :test do
   gem 'byebug'                                 # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   # Use Capistrano for deployment
   # gem 'capistrano-rails', group: :development
+  gem 'pry-rails'
   gem 'rspec-rails', '~> 3.0'
 end
 
