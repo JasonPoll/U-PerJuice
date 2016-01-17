@@ -29,6 +29,9 @@ group :development, :test do
   # gem 'capistrano-rails', group: :development
   gem 'pry-rails'
   gem 'rspec-rails', '~> 3.0'
+  gem 'spring-commands-rspec'
+  gem 'guard-rspec'
+  gem 'rb-fsevent' if `uname` =~ /Darwin/
 end
 
 group :development do
