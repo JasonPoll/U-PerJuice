@@ -1,0 +1,3 @@
+class RecipeNote < Note
+
+end
