@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-gem 'rails',         '4.2.5'
+gem 'rails',         '4.2.5.1'
 gem 'pg'                                       # Use postgresql as the database for Active Record
 
 gem 'sass-rails',    '~> 5.0'                   # Use SCSS for stylesheets
@@ -37,5 +37,10 @@ end
 group :development do
   gem 'web-console', '~> 2.0'                  # Access an IRB console on exception pages or by using <%= console %> in views
   gem 'spring'                                 # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
+end
+
+group :test do
+  gem "codeclimate-test-reporter", require: nil # So CircleCI can pass coverage details to CodeClimate
+  gem 'rspec_junit_formatter', '0.2.2'          # for CircleCI - it'll have a better time identifying slow tests and from that, balance paralellism better...and it better reports errors in builds
 end
 
