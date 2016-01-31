@@ -7,6 +7,8 @@ engines:
     enabled: true
   rubocop:
     enabled: true
+    exclude_fingerprints:
+    - be39aa3236520bcbb2ae0df9021f0ab2 # 'complex' Ingredient#ensure_default_values_are_set
   duplication:
     enabled: true
     config:

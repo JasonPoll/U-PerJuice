@@ -18,3 +18,4 @@
 
 # rspec persistence file
 spec/examples.txt
+coverage
