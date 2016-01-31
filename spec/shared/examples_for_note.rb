@@ -6,6 +6,10 @@ RSpec.shared_examples "a Note derivation" do
       it 'is an STI model' do 
         expect(described_class.descends_from_active_record?).to eq(false)
       end  
+    else
+      it 'is the base STI model' do 
+        expect(described_class).to be(Note)
+      end
     end
 
     it 'populates type column correctly' do 
