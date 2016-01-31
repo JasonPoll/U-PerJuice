@@ -7,3 +7,18 @@ engines:
     enabled: true
   rubocop:
     enabled: true
+  duplication:
+    enabled: true
+    config:
+      languages:
+      - ruby
+      - javascript
+
+ratings:
+   paths:
+   - "**.rb"
+
+exclude_paths:
+- spec/**/*
+- db/**/*
+- bin/**/*
