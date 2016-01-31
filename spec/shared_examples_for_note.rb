@@ -2,9 +2,11 @@ RSpec.shared_examples "a Note derivation" do
   subject { described_class.new(text: "#{described_class.name} test note.") }
 
   context 'STI' do
-    it 'is an STI model' do 
-      expect(described_class.descends_from_active_record?).to eq(false)
-    end  
+    if described_class != Note
+      it 'is an STI model' do 
+        expect(described_class.descends_from_active_record?).to eq(false)
+      end  
+    end
 
     it 'populates type column correctly' do 
       subject.save!
