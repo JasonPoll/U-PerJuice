@@ -11,6 +11,7 @@ class Ingredient < ActiveRecord::Base
   
 
   # --- scopes ------------------------
+  scope :flavors, -> { where(type: 'Flavor') }
 
   # --- methods -----------------------
 

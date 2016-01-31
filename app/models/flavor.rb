@@ -1,0 +1,3 @@
+class Flavor < Ingredient
+  
+end
