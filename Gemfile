@@ -32,6 +32,7 @@ group :development, :test do
   gem 'spring-commands-rspec'
   gem 'guard-rspec'
   gem 'rb-fsevent' if `uname` =~ /Darwin/
+  gem "rails-erd"
 end
 
 group :development do
@@ -40,7 +41,7 @@ group :development do
 end
 
 group :test do
-  gem "codeclimate-test-reporter", require: nil # So CircleCI can pass coverage details to CodeClimate
+  gem "codeclimate-test-reporter"               # So CircleCI can pass coverage details to CodeClimate
   gem 'rspec_junit_formatter', '0.2.2'          # for CircleCI - it'll have a better time identifying slow tests and from that, balance paralellism better...and it better reports errors in builds
 end
 
